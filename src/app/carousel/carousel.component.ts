@@ -13,13 +13,11 @@ export class CarouselComponent {
 
   constructor() {
     const totalImages = 63; // Número total de imágenes
-    const extensionMap: Record<number, string> = { 
-      18: 'jpeg', // Imagen específica con extensión diferente 
-    };
+
 
     // Genera las rutas de las imágenes
     for (let i = 1; i <= totalImages; i++) {
-      const extension = extensionMap[i] || 'jpg';
+      const extension = 'jpg';
       this.images.push(`assets/caruosel/${i}.${extension}`);
     }
 
