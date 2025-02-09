@@ -16,11 +16,13 @@ export const routes: Routes = [
     {
         path: 'music-player',
         component: MusicPlayerComponent
-    }
-    ,
+    },
     {
-        path: 'valentin1',
+        path: 'valentin',
         component: HomeComponent
+    },
+    {
+        path: '**',
+        redirectTo: 'home' // Manejo de rutas inexistentes
     }
-
 ];
