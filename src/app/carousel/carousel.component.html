@@ -1,0 +1,22 @@
+<div id="carrouselSanValentin" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="d-flex justify-content-center align-items-center" style="min-height: 100%;">
+    <div class="carousel-inner p-3 bg-light-pink rounded-2 shadow text-center">
+      <div 
+        class="carousel-item"
+        *ngFor="let image of images; let i = index"
+        [class.active]="i === 0">
+        <img [src]="image" class="d-block w-100 rounded-2 valentine-border" alt="San Valentín Image">
+      </div>
+    </div>
+  </div>
+
+  <!-- Botones de control personalizados -->
+  <button class="carousel-control-prev custom-control" type="button" data-bs-target="#carrouselSanValentin" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon bg-heart-prev rounded-circle" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next custom-control" type="button" data-bs-target="#carrouselSanValentin" data-bs-slide="next">
+    <span class="carousel-control-next-icon bg-heart-next rounded-circle" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

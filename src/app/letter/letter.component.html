@@ -1,0 +1,71 @@
+
+<div class="letter-wrapper rounded-4">
+    <div class="content-header" >   
+        <h2 class="textletter">¡ Un momento muy especial ! </h2>
+        <br>
+        <p class="subtitleletter"> Queria decirte que todos los dias junto a ti es el mejor regalo de la vida.<br> </p>
+    </div>
+
+    @if (showCongrats ) {
+      <div  class="valentine-congrats">
+      <h1>¡Felicidades!</h1>
+      <p>Has aceptado ser mi cita. Hermosaaa 💕</p>
+      <img src="https://media4.giphy.com/media/n0IKF3qkeh671VAO45/giphy.gif" alt="congrats" />
+      </div>
+    }@else if (showSad) {
+      <div class="valentine-sad">
+        <h1>¡Qué triste! 😢</h1>
+        <p>Me quedare solito triste y abandonado  :c pipipipi 💔</p>
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmVzN2xiZnNwNDJweXE5dmdpeWwxNjEyNjRpZHhjZTIwMGVlN3ExeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xVcbCLYahhLtC97vZu/giphy.gif" alt="sad" />
+      </div>
+    }
+    @else {
+    
+    <div>
+      <div class="container" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+          <div class="valentines" data-bs-toggle="modal" data-bs-target="#valentineModal">
+                  <div class="envelope"></div>
+                  <div class="front"></div>
+              <div class="card" [class.lifted]="cardLifted"  >
+                <div class="text">Happy<br>Valentine's<br>Day!</div>
+                <div class="heart"></div>
+              </div>
+              <div class="hearts">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+                <div class="four"></div>
+                <div class="five"></div>
+              </div>
+              </div>
+            <div class="shadow"></div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="valentineModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="valentineModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered"> <!-- Clase añadida aquí -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="valentineModalLabel">¡Una Pregunta Importante!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Me encanta el tiempo que paso contigo, <br>
+                Siempre quiero estar a tu ladito abrazaditos, <br>
+                Se que ya somos practicamente inseparables, <br>
+                Que ya somos como un par de tortolitos, <br>
+                Pero... <br>
+                ¿Serías mi cita este San Valentín? 💕
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn  learn-more"  id="buttonhome" data-bs-dismiss="modal" (click)="onNoClick()">Lo pensaré...</button>
+                <button type="button" class="btn  learn-more"  id="buttonhome" data-bs-dismiss="modal" (click)="onYesClick()">¡Claro que sí! 💖</button>
+              </div>
+              
+            </div>
+          </div>
+      </div>
+    </div>
+  }
+</div>
+
+  

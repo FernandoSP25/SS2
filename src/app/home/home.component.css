@@ -1,0 +1,259 @@
+
+
+    .headerhome {
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+    
+    .mainhome {
+        margin-top: 10px;
+        text-align: center; 
+    }
+
+    .bodyhome {
+        font-family: 'Rubik', sans-serif;
+        font-size: 1rem;
+        line-height: 1.5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin: 0;
+        color: var(--text);
+        min-height: 100vh;
+        background: var(--bg);
+    }
+
+    .phome {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--text);
+        margin: 0;
+    }
+
+    #buttonhome {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        vertical-align: middle;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+    }
+
+
+    #buttonhome.learn-more {
+        font-weight: 600;
+        color: var(--text);
+        text-transform: uppercase;
+        padding: 1.25em 2em;
+        font-size: 0.7rem;
+        background: var(--light-pink);
+        border: 2px solid var(--pink-border);
+        border-radius: 0.75em;
+        transform-style: preserve-3d;
+        transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+    }
+
+    #buttonhome.learn-more::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--dark-pink);
+    border-radius: inherit;
+    box-shadow: 0 0 0 2px var(--pink-border), 0 0.625em 0 0 var(--pink-shadow);
+    transform: translate3d(0, 0.75em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+    }
+
+    #buttonhome.learn-more:hover {
+    background: var(--pink);
+    transform: translate(0, 0.25em);
+    }
+
+    #buttonhome.learn-more:hover::before {
+    box-shadow: 0 0 0 2px var(--pink-border), 0 0.5em 0 0 var(--pink-shadow);
+    transform: translate3d(0, 0.5em, -1em);
+    }
+
+    #buttonhome.learn-more:active {
+    background: var(--pink);
+    transform: translate(0em, 0.75em);
+    }
+
+    #buttonhome.learn-more:active::before {
+    box-shadow: 0 0 0 2px var(--pink-border), 0 0 var(--pink-shadow);
+    transform: translate3d(0, 0, -1em);
+    }
+
+
+    .cardhome {
+        width: 400px;
+        height: 300px;
+        border-radius: 15px;
+        background: rgba(105, 13, 197, 0.103);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .cardhome::before {
+        content: "";
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        top: -40%;
+        left: -20%;
+        border-radius: 50%;
+        border: 35px solid rgba(255, 255, 255, 0.102);
+        transition: all .8s ease;
+        filter: blur(.5rem);
+    }
+    
+    .texthome {
+        flex-grow: 1;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        color: var(--light-pink);
+        font-weight: 900;
+        font-size: 1.4rem;
+    }
+    
+    .subtitlehome {
+        font-size: 0.8em;
+        font-weight: 300;
+        color: var(--text);
+        line-height: 1.5;
+        text-align: center;
+    }
+    
+    .cardhome:hover::before {
+        width: 240px;
+        height: 240px;
+        top: -20%;
+        left: 50%;
+        filter: blur(0rem);
+    }
+
+    .enviarCorreo {
+        width: 200px; 
+        margin: 10px auto;
+        text-align: center;
+        padding: 10px;
+        background-color: rgba(255, 192, 203, 0.1); /* Color de fondo opcional */
+        border-radius: 8px;
+      }
+      
+      .enviarCorreo p {
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+        color: var(--text);
+      }
+
+
+    .audio-player {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 280px;
+        height: 80px;
+        background-color: #282828;
+        border-radius: 8px;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+    
+    .album-cover {
+        width: 64px;
+        height: 64px;
+        background-image: url('../../../public/TAEHYUNG.jpg');
+        background-size: cover; 
+        background-position: center;
+        border-radius: 50%;
+        margin-right: 12px;
+    }
+    
+    .player-controls {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .song-info {
+        margin-bottom: 6px;
+    }
+    
+    .song-title {
+        font-size: 13px;
+        color: #fff;
+        margin: 0;
+    }
+    
+    .artist {
+        font-size: 12px;
+        color: #b3b3b3;
+        margin: 0;
+    }
+    
+    .progress-bar {
+        width: 100%;
+        height: 4px;
+        background-color: #4f4f4f;
+        border-radius: 2px;
+        overflow: hidden;
+    }
+    
+    .progress {
+        width: 50%;
+        height: 100%;
+        background-color: #1db954;
+        transform-origin: left;
+        animation: progress-animation 10s linear infinite;
+    }
+    
+    .buttons {
+        display: flex;
+    }
+    
+    #buttonhome {
+        background: none;
+        border: none;
+        cursor: pointer;
+        outline: none;
+    }
+    
+    .play-btn,
+    .pause-btn {
+        font-size: 16px;
+        color: #fff;
+        margin-right: 8px;
+        transition: transform 0.2s ease-in-out;
+    }
+    
+    .play-btn:hover,
+    .pause-btn:hover {
+        transform: scale(1.2);
+    }
+  
+    @keyframes progress-animation {
+        0% {
+        transform: scaleX(0);
+        }
+    
+        100% {
+        transform: scaleX(1);
+        }
+    }
+    

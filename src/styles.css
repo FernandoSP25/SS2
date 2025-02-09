@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Rubik:700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap");
+
+:root {
+    --bg: #ffe3e2;
+    --text: #673b59;
+    --light-pink: #fff0f0;
+    --pink: #ffe9e9;
+    --dark-pink: #f9c4d2;
+    --pink-border: #b18597;
+    --pink-shadow: #ffe3e2;
+    --background: #e0e5ec;
+    --gray: #797d7f;
+  }
+
+  body {
+    background: linear-gradient(135deg,#ffe3e2,var(--dark-pink), var(--pink),var(--light-pink), #ffcbc5);
+    font-family: "Raleway", sans-serif;
+    }

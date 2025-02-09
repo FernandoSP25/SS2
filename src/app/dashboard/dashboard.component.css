@@ -1,0 +1,15 @@
+/* Tamaño reducido del carrusel */
+app-carousel {
+  height: 10px; /* Ajusta la altura según prefieras */
+  overflow: hidden;
+}
+
+app-carousel img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+app-music-player {
+  height: 250px;
+}
