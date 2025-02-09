@@ -112,14 +112,11 @@
                   "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           }
-        },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
   },
   "cli": {
-    "analytics": "566c8b89-4350-49e8-ad1a-c46547198389"
+    "analytics": false
   }
 }

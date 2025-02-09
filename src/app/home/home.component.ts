@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,22 +7,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  audio: HTMLAudioElement;
-
-  constructor() {
-    this.audio = new Audio();
-    this.audio.src = "SnowFlowerfeatPeakboy.mp3";
-    this.audio.load();
-  }
+  @ViewChild('audioPlayer') audioPlayer!: ElementRef<HTMLAudioElement>;
+  isPaused: boolean = true;
+    file: string = 'assets/music/reasons-smiles.mp3';
 
   ngOnInit(): void {}
 
   playAudio() {
-    this.audio.play();
+    const audio = this.audioPlayer.nativeElement;
+    if (audio.paused || audio.ended) {
+      audio.play();
+      this.isPaused = false;
+    } else {
+      audio.pause();
+      this.isPaused = true;
+    }
   }
 
   pauseAudio() {
-    this.audio.pause();
+    const audio = this.audioPlayer.nativeElement;
+    if (audio.paused || audio.ended) {
+      audio.play();
+      this.isPaused = false;
+    } else {
+      audio.pause();
+      this.isPaused = true;
+    }
   }
 
   enviarCorreo() {
